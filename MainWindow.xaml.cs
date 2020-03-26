@@ -1,23 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using Newtonsoft.Json;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Speech.Synthesis;
-using System.Globalization;
+﻿using System.Windows;
+using Translator.ViewModel;
 
 namespace Translator
 {
@@ -29,7 +11,7 @@ namespace Translator
 		public MainWindow()
 		{
 			InitializeComponent();
-			DataContext = new TranslatorModel();
+			DataContext = new Presenter();
 		}
 	}
 }

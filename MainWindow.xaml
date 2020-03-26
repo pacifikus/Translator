@@ -16,13 +16,13 @@
 			<ColumnDefinition Width="64*"/>
 			<ColumnDefinition Width="395*"/>
 		</Grid.ColumnDefinitions>
-		<ComboBox ItemsSource="{Binding ListLangs}" SelectedItem="{Binding SelectedLangIn}"  Grid.Column="0" HorizontalAlignment="Left"></ComboBox>
+		<ComboBox SelectedValuePath="Value" DisplayMemberPath="Key" ItemsSource="{Binding Langs}" SelectedItem="{Binding SelectedLangIn}"  Grid.Column="0" HorizontalAlignment="Left"/>
 		<StackPanel Orientation="Horizontal" Grid.Column="2">
-			<ComboBox ItemsSource="{Binding ListLangs}" SelectedItem="{Binding SelectedLang}" Grid.Column="2" HorizontalAlignment="Left"></ComboBox>
-			<Button  Content="Прослушать" Command="{Binding SpeechSynthesisCommand}"></Button>
+			<ComboBox SelectedValuePath="Value" DisplayMemberPath="Key" ItemsSource="{Binding Langs}" SelectedItem="{Binding SelectedLang}" Grid.Column="2" HorizontalAlignment="Left"/>
+			<Button  Content="Прослушать" Command="{Binding SpeechSynthesisCommand}"/>
 		</StackPanel>
-		<TextBox Text="{Binding  InputText}" Grid.Row="1"></TextBox>
-		<TextBox  Text="{Binding  Result}" Grid.Row="1" Grid.Column="2"></TextBox>
-		<Button Height="30" Width="30" Content="&gt;" Grid.Column="1" Grid.Row="1" Command="{Binding TranslateCommand}"></Button>
+		<TextBox Text="{Binding InputText}" Grid.Row="1"/>
+		<TextBox  Text="{Binding Result}" Grid.Row="1" Grid.Column="2"/>
+		<Button Height="30" Width="30" Content="&gt;" Grid.Column="1" Grid.Row="1" Command="{Binding TranslateCommand}"/>
 	</Grid>
 </Window>
