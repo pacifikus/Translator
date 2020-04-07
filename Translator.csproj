@@ -58,7 +58,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Model\ApiTranslator.cs" />
+    <Compile Include="Model\YandexTranslator.cs" />
+    <Compile Include="Model\GoogleTranslator.cs" />
+    <Compile Include="Model\BaseTranslator.cs" />
     <Compile Include="ViewModel\RelayCommand.cs" />
     <Compile Include="ViewModel\Presenter.cs" />
     <Page Include="MainWindow.xaml">

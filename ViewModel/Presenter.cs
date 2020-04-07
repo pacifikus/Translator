@@ -12,7 +12,7 @@ namespace Translator.ViewModel
 {
 	class Presenter: INotifyPropertyChanged	
 	{
-		private ApiTranslator _translator = new ApiTranslator();
+		private BaseTranslator _translator = new YandexTranslator();
 		private Dictionary<string, string> _langs;
 		private string _result;
 
